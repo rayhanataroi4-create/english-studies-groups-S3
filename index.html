@@ -1,0 +1,112 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Group Finder - English Studies S3</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      background-image: url('https://images.pexels.com/photos/931162/pexels-photo-931162.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+}
+
+.container {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 40px;
+      margin: 80px auto;
+      width: 80%;
+      border-radius: 20px;
+      box-shadow: 0 0 10px #d63384;
+}
+
+    h2 {
+      color: #d63384;
+      font-size: 24px;
+      margin-bottom: 20px;
+}
+
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #d63384;
+      border-radius: 8px;
+      margin-top: 10px;
+}
+
+    input::placeholder {
+      text-align: center;
+}
+
+    button {
+      background-color: #ffb6c1;
+      color: white;
+      cursor: pointer;
+}
+
+    button:hover {
+      background-color: #ff99b3;
+}
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #c2185b;
+}
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: white;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>If you're an English Studies S3 student, enter your last name to find your group 🌸</h2>
+    <input type="text" id="lastName" placeholder="Enter your last name here">
+    <br>
+    <button onclick="findGroup()">Search 🌸</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function findGroup() {
+      const inputName = document.getElementById("lastName").value.trim();
+      const result = document.getElementById("result");
+
+      if (!inputName) {
+        result.innerText = "❌ Please enter your last name.";
+        return;
+}
+
+      const nameUpper = inputName.toUpperCase();
+
+      if (nameUpper < "AMEN") {
+        result.innerText = " Welcome! You are in Group G1 🤗";
+} else if (nameUpper < "BOUH") {
+        result.innerText = " Welcome! You are in Group G2 🤗";
+} else if (nameUpper < "EL H") {
+        result.innerText = " Welcome! You are in Group G3 🤗";
+} else if (nameUpper < "FARR") {
+        result.innerText = " Welcome! You are in Group G4 🤗";
+} else if (nameUpper < "KARS") {
+        result.innerText = " Welcome! You are in Group G5 🤗";
+} else if (nameUpper < "OUBA") {
+        result.innerText = " Welcome! You are in Group G6 🤗";
+} else {
+        result.innerText = " Welcome! You are in Group G7 🤗";
+}
+}
+  </script>
+
+  <footer>
+    Page created by Rayhana 🌸
+  </footer>
+</body>
+</html>
